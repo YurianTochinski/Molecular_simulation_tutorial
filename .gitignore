@@ -9,3 +9,7 @@ docs/source/03_ase/01_energy_calculation/Al_2x2x2.xyz
 docs/source/03_ase/01_energy_calculation/graphite_atoms.xyz
 docs/source/03_ase/03_MD_analysis/mdtraj.pdb
 docs/source/03_ase/**/.ipynb_checkpoints/
+
+# Lecture slide sources (managed outside git); public PDFs live only in docs/source/_static/slides
+*.pptx
+/slides/

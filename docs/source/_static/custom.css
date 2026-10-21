@@ -29,3 +29,90 @@
   border-color: #d27c7c;
   color: #8a1f1f;
 }
+
+/* PDF slide viewer (see slide_viewer.js) */
+.slide-viewer {
+  margin: 1rem 0 1.5rem;
+  border: 1px solid #d0d7de;
+  border-radius: 0.4rem;
+  background-color: #f6f8fa;
+  outline: none;
+}
+
+.slide-viewer:fullscreen {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+}
+
+.slide-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-viewer:fullscreen .slide-stage {
+  flex: 1;
+  min-height: 0;
+}
+
+.slide-stage canvas {
+  display: block;
+  cursor: pointer;
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.4rem;
+  border-top: 1px solid #d0d7de;
+}
+
+.slide-controls button {
+  min-width: 2.4rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #d0d7de;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.slide-counter {
+  min-width: 4rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.slide-viewer:fullscreen .slide-counter {
+  color: #fff;
+}
+
+.slide-error {
+  padding: 1rem;
+}
+
+.slide-lang {
+  display: inline-flex;
+  margin-left: 0.8rem;
+}
+
+.slide-lang button {
+  border-radius: 0;
+}
+
+.slide-lang button:first-child {
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.slide-lang button:last-child {
+  border-left: none;
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.slide-lang button[aria-pressed="true"] {
+  background-color: #2980b9;
+  border-color: #2980b9;
+  color: #fff;
+}
