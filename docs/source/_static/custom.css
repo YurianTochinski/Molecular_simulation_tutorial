@@ -116,3 +116,69 @@
   border-color: #2980b9;
   color: #fff;
 }
+
+/* 図と表を横に並べる（```{container} side-by-side```） */
+.side-by-side {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.side-by-side > figure {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.side-by-side > .wy-table-responsive,
+.side-by-side > table {
+  flex: 1 1 auto;
+  margin-bottom: 0;
+}
+
+/* 画面が狭いときは縦に並べる */
+@media (max-width: 768px) {
+  .side-by-side {
+    flex-direction: column;
+  }
+}
+
+/* 複数の図を横に並べる（```{container} figure-row```）。高さをそろえて表示する */
+.figure-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.figure-row > figure {
+  flex: 0 1 auto;
+  margin: 0;
+}
+
+.figure-row > figure img {
+  height: 260px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .figure-row {
+    flex-direction: column;
+  }
+
+  .figure-row > figure img {
+    height: auto;
+  }
+}
+
+/* figure-row の幅広版（```{container} figure-row wide```）。図がページ幅を等分して並ぶ */
+.figure-row.wide > figure {
+  flex: 1 1 0;
+}
+
+.figure-row.wide > figure img {
+  height: auto;
+  width: 100%;
+}
